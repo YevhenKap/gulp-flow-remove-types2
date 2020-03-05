@@ -61,10 +61,13 @@ class GulpFlowTransform extends Transform {
         this.emit('error', new PluginError('gulp-flow-remove-types2', error))
       }
     } else if (vinylFile.isStream()) {
-      this.emit('error', new PluginError(
-        'gulp-flow-remove-types2',
-        'flow-remove-types needs the whole file to process.'
-      ))
+      this.emit(
+        'error',
+        new PluginError(
+          'gulp-flow-remove-types2',
+          'flow-remove-types needs the whole file to process.'
+        )
+      )
     }
   }
 }
