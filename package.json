@@ -1,6 +1,6 @@
 {
   "name": "gulp-flow-remove-types2",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Plugin for gulp that integrate flow-remove-types utility.",
   "main": "dist/index.js",
   "homepage": "https://github.com/YevhenKap/gulp-flow-remove-types2.git",
@@ -9,10 +9,10 @@
     "url": "https://github.com/YevhenKap/gulp-flow-remove-types2.git"
   },
   "scripts": {
-    "clean": "rm -r tmp/; rm -r dist/",
+    "clean": "rm -r tmp/*; rm -r dist/*",
     "build": "npm run clean; flow-remove-types --pretty src/ -d tmp/; gulp",
     "release": "npm run build; npm publish --access public",
-    "test": "jest"
+    "test": "npm run build; jest"
   },
   "keywords": [
     "gulp",
@@ -22,7 +22,7 @@
   "author": "Kapelianovych Yevhen",
   "license": "MIT",
   "dependencies": {
-    "flow-remove-types": "^2.119.1",
+    "flow-remove-types": "^2.120.1",
     "plugin-error": "^1.0.1",
     "vinyl": "^2.2.0"
   },
@@ -32,10 +32,11 @@
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-flowtype": "^4.5.3",
     "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "flow-bin": "^0.120.0",
+    "flow-bin": "^0.120.1",
     "gulp": "^4.0.2",
     "gulp-uglify-es": "^2.0.0",
     "jest": "^25.1.0"

@@ -1,4 +1,9 @@
-# 1.1.0
+# 1.1.1
+
+- Bump `flow-remove-types` to **2.120.1**.
+- Move class property from `GulpFlowTransform` to outer variable.
+
+## 1.1.0
 
 - Update `flow-remove-types` to **2.119.1**.
 - Add `gulp` task runner.

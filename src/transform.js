@@ -13,15 +13,17 @@ export type GulpFlowTransformOptions = {
   pretty?: boolean,
 }
 
-class GulpFlowTransform extends Transform {
-  _gulpFlowOptions: GulpFlowTransformOptions
+const _gulpFlowOptions: GulpFlowTransformOptions = {}
 
+class GulpFlowTransform extends Transform {
   constructor(options?: GulpFlowTransformOptions = {}) {
     super({
       objectMode: true,
     })
 
-    this._gulpFlowOptions = options
+    for (const key in options) {
+      _gulpFlowOptions[key] = options[key]
+    }
   }
 
   _transform(
@@ -32,7 +34,7 @@ class GulpFlowTransform extends Transform {
     if (vinylFile.isNull()) {
       callback(null, vinylFile)
     } else if (vinylFile.isBuffer()) {
-      const { pretty, sourceMap } = this._gulpFlowOptions
+      const { pretty, sourceMap } = _gulpFlowOptions
 
       try {
         const transformedFile = flowRemoveTypes(
