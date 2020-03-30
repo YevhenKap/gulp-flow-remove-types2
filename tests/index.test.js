@@ -29,6 +29,8 @@ describe('gulp-javascript-obfuscator', () => {
         expect(multiply).toBeInstanceOf(Function)
         // eslint-disable-next-line no-undef
         expect(multiply(3, 12)).toBe(36)
+        // eslint-disable-next-line no-undef
+        expect(multiply(3, '12')).toBe(NaN)
         resolve()
       })
     })

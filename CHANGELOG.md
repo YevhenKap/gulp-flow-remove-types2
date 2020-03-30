@@ -1,4 +1,8 @@
-# 1.1.1
+# 1.1.2
+
+- Bump `flow-remove-types` to **2.121.0**.
+
+## 1.1.1
 
 - Bump `flow-remove-types` to **2.120.1**.
 - Move class property from `GulpFlowTransform` to outer variable.
