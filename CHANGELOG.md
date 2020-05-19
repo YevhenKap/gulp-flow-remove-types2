@@ -1,4 +1,8 @@
-# 1.1.2
+# 1.1.3
+
+- Bump `flow-remove-types` to **2.125.1**.
+
+## 1.1.2
 
 - Bump `flow-remove-types` to **2.121.0**.
 
